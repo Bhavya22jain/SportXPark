@@ -1,6 +1,6 @@
-# SportSphere AI — Multi-Sport Analytics & Prediction Platform
+# SportXPark — Multi-Sport Analytics & Prediction Platform
 
-SportSphere AI is a production-grade, end-to-end sports analytics and match outcome prediction platform. Built in Python, it integrates machine learning engines, automated feature engineering, and statistical modeling with an interactive web dashboard. It covers **Cricket (IPL)**, **Football (European Leagues)**, and **NBA Basketball** datasets to provide high-fidelity prediction probabilities, player ranking systems (MVP Index), efficiency stats, head-to-head comparisons, and cross-sport analytics.
+SportXPark is a production-grade, end-to-end sports analytics and match outcome prediction platform. Built in Python, it integrates machine learning engines, automated feature engineering, and statistical modeling with an interactive web dashboard. It covers **Cricket (IPL)**, **Football (European Leagues)**, and **NBA Basketball** datasets to provide high-fidelity prediction probabilities, player ranking systems (MVP Index), efficiency stats, head-to-head comparisons, and cross-sport analytics.
 
 ## 🚀 Key Features
 
@@ -25,7 +25,7 @@ SportSphere AI is a production-grade, end-to-end sports analytics and match outc
 ## 📂 Project Structure
 
 ```text
-sportsphere-ai/
+SportXPark/
 │
 ├── data/
 │   ├── cricket/           # Raw Cricket match & ball data
