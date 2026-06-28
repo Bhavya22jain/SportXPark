@@ -162,7 +162,7 @@ def load_cross_sport_metrics() -> dict:
     
     # 1. Cricket Home win rate (IPL: does batting first or toss win play a larger role?)
     try:
-        cr_matches = pd.read_csv("data/processed/cricket_matches.csv")
+        cr_matches = pd.read_csv("cricket_matches.csv")
         cr_total = len(cr_matches)
         
         # Win rate for team1 (historically team1 matches or default home team)
@@ -190,7 +190,7 @@ def load_cross_sport_metrics() -> dict:
 
     # 2. Football Home advantage
     try:
-        fb_matches = pd.read_csv("data/processed/football_matches.csv")
+        fb_matches = pd.read_csv("football_matches.csv")
         fb_total = len(fb_matches)
         home_wins = len(fb_matches[fb_matches['result'] == 'H'])
         away_wins = len(fb_matches[fb_matches['result'] == 'A'])
@@ -207,7 +207,7 @@ def load_cross_sport_metrics() -> dict:
 
     # 3. NBA Home advantage
     try:
-        nba_games = pd.read_csv("data/processed/nba_games.csv")
+        nba_games = pd.read_csv("nba_games.csv")
         nba_total = len(nba_games)
         home_wins = len(nba_games[nba_games['HOME_TEAM_WINS'] == 1])
         
