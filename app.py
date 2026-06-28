@@ -277,33 +277,33 @@ def load_processed_data():
     
     # Cricket Data
     try:
-        data['cricket_team_stats'] = pd.read_csv("data/processed/cricket_team_stats.csv")
-        data['cricket_player_stats'] = pd.read_csv("data/processed/cricket_player_stats.csv")
-        data['cricket_bowl_stats'] = pd.read_csv("data/processed/cricket_bowl_stats.csv")
-        data['cricket_venue_stats'] = pd.read_csv("data/processed/cricket_venue_stats.csv")
-        data['cricket_matches'] = pd.read_csv("data/processed/cricket_matches.csv")
+        data['cricket_team_stats'] = pd.read_csv("cricket_team_stats.csv")
+        data['cricket_player_stats'] = pd.read_csv("cricket_player_stats.csv")
+        data['cricket_bowl_stats'] = pd.read_csv("cricket_bowl_stats.csv")
+        data['cricket_venue_stats'] = pd.read_csv("cricket_venue_stats.csv")
+        data['cricket_matches'] = pd.read_csv("cricket_matches.csv")
     except Exception as e:
         st.warning(f"Error loading Cricket datasets: {e}")
 
     # Football Data
     try:
-        data['football_team_perf'] = pd.read_csv("data/processed/football_team_performance.csv")
-        data['football_ha'] = pd.read_csv("data/processed/football_home_away_analysis.csv")
-        data['football_teams'] = pd.read_csv("data/processed/football_teams.csv")
-        data['football_leagues'] = pd.read_csv("data/processed/football_leagues.csv")
-        data['football_matches'] = pd.read_csv("data/processed/football_matches.csv")
+        data['football_team_perf'] = pd.read_csv("football_team_performance.csv")
+        data['football_ha'] = pd.read_csv("football_home_away_analysis.csv")
+        data['football_teams'] = pd.read_csv("football_teams.csv")
+        data['football_leagues'] = pd.read_csv("football_leagues.csv")
+        data['football_matches'] = pd.read_csv("football_matches.csv")
     except Exception as e:
         st.warning(f"Error loading Football datasets: {e}")
 
     # NBA Data
     try:
-        data['nba_player_eff'] = pd.read_csv("data/processed/nba_player_efficiency.csv")
-        data['nba_team_ratings'] = pd.read_csv("data/processed/nba_team_ratings.csv")
-        data['nba_ranking'] = pd.read_csv("data/processed/nba_ranking.csv")
-        data['nba_teams'] = pd.read_csv("data/processed/nba_teams.csv")
-        data['nba_players'] = pd.read_csv("data/processed/nba_players.csv")
-        data['nba_games'] = pd.read_csv("data/processed/nba_games.csv")
-        data['nba_player_summary'] = pd.read_csv("data/processed/nba_player_details_summary.csv")
+        data['nba_player_eff'] = pd.read_csv("nba_player_efficiency.csv")
+        data['nba_team_ratings'] = pd.read_csv("nba_team_ratings.csv")
+        data['nba_ranking'] = pd.read_csv("nba_ranking.csv")
+        data['nba_teams'] = pd.read_csv("nba_teams.csv")
+        data['nba_players'] = pd.read_csv("nba_players.csv")
+        data['nba_games'] = pd.read_csv("nba_games.csv")
+        data['nba_player_summary'] = pd.read_csv("nba_player_details_summary.csv")
     except Exception as e:
         st.warning(f"Error loading NBA datasets: {e}")
 
