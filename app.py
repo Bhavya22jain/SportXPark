@@ -315,21 +315,21 @@ def load_ml_models():
     models = {}
     # Cricket
     try:
-        with open("models/cricket_models.pkl", "rb") as f:
+        with open("cricket_models.pkl", "rb") as f:
             models['cricket'] = pickle.load(f)
     except:
         models['cricket'] = None
         
     # Football
     try:
-        with open("models/football_models.pkl", "rb") as f:
+        with open("football_models.pkl", "rb") as f:
             models['football'] = pickle.load(f)
     except:
         models['football'] = None
 
     # NBA
     try:
-        with open("models/nba_models.pkl", "rb") as f:
+        with open("nba_models.pkl", "rb") as f:
             models['nba'] = pickle.load(f)
     except:
         models['nba'] = None
