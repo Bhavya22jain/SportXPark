@@ -506,7 +506,7 @@ elif app_mode == "🏏 Cricket (IPL) Hub":
             else:
                 if st.button("Predict Match Winner", key="predict_cricket"):
                     # Load model predictor
-                    from src.cricket_pipeline import predict_match
+                    from cricket_pipeline import predict_match
                     pred_res = predict_match(
                         team1, team2, toss_winner, toss_decision, venue,
                         le_team, c_models, feature_names, data['cricket_matches']
@@ -545,7 +545,7 @@ elif app_mode == "🏏 Cricket (IPL) Hub":
                             st.plotly_chart(fig, use_container_width=True)
                             
                         # Dynamic narrative insights
-                        from src.insights_engine import generate_cricket_insights
+                        from insights_engine import generate_cricket_insights
                         insights = generate_cricket_insights(data['cricket_matches'], winner)
                         st.markdown("#### AI Analyst Observations")
                         for ins in insights:
@@ -746,7 +746,7 @@ elif app_mode == "⚽ Football Hub":
                         st.plotly_chart(fig_probs, use_container_width=True)
                         
                     # AI Observations
-                    from src.insights_engine import generate_football_insights
+                    from insights_engine import generate_football_insights
                     insights = generate_football_insights(data['football_matches'], home_team)
                     st.markdown("#### AI Analyst Observations")
                     for ins in insights:
@@ -760,7 +760,7 @@ elif app_mode == "⚽ Football Hub":
         selected_league = st.selectbox("Select League", leagues)
         
         # Calculate standings dynamically using league_standings function
-        from src.football_pipeline import league_standings
+        from football_pipeline import league_standings
         standings = league_standings(data['football_matches'], selected_league)
         
         if standings.empty:
@@ -904,7 +904,7 @@ elif app_mode == "🏀 NBA Hub":
                         st.plotly_chart(fig, use_container_width=True)
                         
                     # AI Insights
-                    from src.insights_engine import generate_nba_insights
+                    from insights_engine import generate_nba_insights
                     insights = generate_nba_insights(data['nba_games'], home_team_sel['id'], home_team_sel['name'])
                     st.markdown("#### AI Analyst Observations")
                     for ins in insights:
@@ -1004,7 +1004,7 @@ elif app_mode == "🧠 AI Insights & Cross-Sport":
     st.markdown("Unify insights across multiple disciplines to study fundamental trends of sports matches, home advantages, scoring distributions, and variance metrics.")
     
     # Load cross-sport data
-    from src.insights_engine import load_cross_sport_metrics
+    from insights_engine import load_cross_sport_metrics
     metrics = load_cross_sport_metrics()
     
     st.write("")
